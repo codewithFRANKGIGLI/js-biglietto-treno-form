@@ -12,33 +12,59 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper text-center">
         <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-        <div class="top container">
+        <div class="ms-top-container container">
             <div class="row d-flex justify-content-center">
-                <div class="col d-flex flex-column align-items-center">
+                <div class="col d-flex flex-column align-items-center p-3">
                     <!-- INPUT NOME E COGNOME -->
                     <label for="nome-utente">Nome e cognome</label>
                     <input id="nome-utente" type="text" name="" value="" placeholder="Inserisci il tuo nome">
                 </div>
-                <div class="col d-flex flex-column align-items-center">
+                <div class="col d-flex flex-column align-items-center p-3">
                     <!-- INPUT CHILOMETRAGGIO -->
                     <label for="km">Chilometraggio</label>
                     <input id="km" type="number" name="" value="" placeholder="Km da percorrere">
                 </div>
-                <div class="col d-flex flex-column align-items-center">
+                <div class="col d-flex flex-column align-items-center p-3">
                     <!-- INPUT FASCIA ETA' -->
                     <label for="fascia-eta">Fascia d'età</label>
-                    <select id="fascia-eta" class="" name="">
+                    <select id="fascia-eta" class="rounded" name="">
                         <option value="minorenne">Minorenne</option>
                         <option value="maggiorenne">Maggiorenne</option>
                         <option value="over65">Over 65</option>
                     </select>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <button id="genera" class="btn">Genera</button>
-                <button id="annulla" class="btn">Annulla</button>
+            <div class="row d-flex justify-content-center gap-2 p-3">
+                <button id="genera" class="btn btn-secondary btn-sm col-1">Genera</button>
+                <button id="annulla" class="btn btn-secondary btn-sm col-1">Annulla</button>
+            </div>
+        </div>
+        <h2 class="p-3 m-0">IL TUO BIGLIETTO</h2>
+        <div id="biglietto" class="ms-bottom-container bg-white p-3 hidden">
+            <h3 class="padding fw-bold text-black">Dettaglio passegeri</h3>
+            <div class="dettaglio-biglietto d-flex border-top border-bottom border-secondary">
+                <div class="col bg-secondary">
+                    <h3 class="fw-bold text-black pt-5">NOME PASSEGGERO</h3>
+                    <h4 class="fw-bold text-black p-3" id="nome-passegero"></h4>
+                </div>
+                <div class="col">
+                    <table>
+                        <tr>
+                            <th class="p-3 text-black">Offerta</th>
+                            <th class="p-3 text-black">Carrozza</th>
+                            <th class="p-3 text-black">Codice CP</th>
+                            <th class="p-3 text-black">Costo biglietto</th>
+                        </tr>
+                        <tr>
+                            <td class="p-3" id="offerta"></td>
+                            <td class="p-3" id="carrozza"></td>
+                            <td class="p-3" id="codice-cp"></td>
+                            <td class="p-3" id="costo-biglietto"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

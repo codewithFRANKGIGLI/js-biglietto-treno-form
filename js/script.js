@@ -30,17 +30,19 @@ buttonGenera.addEventListener('click', function() {
     const percorrenza = parseInt(inputKm.value);
     console.log(percorrenza);
 
-    const offerta = "Tariffa Standard"  
-    if (eta === "Minorenne") {
-        prezzoBigliettoSenzaSconto *= 0.8; // Applicazione dello sconto del 20%
-        offerta = "Sconto Minorenne";
-    } else if (eta === "Over 65") {
-        prezzoBigliettoSenzaSconto *= 0.6; // Applicazione dello sconto del 40%
-        offerta = "Sconto Over 65";
-    } 
+    let offerta = "Tariffa Standard"; 
+
     const prezzoAlKilometro = 0.21;
     const prezzoBigliettoSenzaSconto = prezzoAlKilometro * percorrenza;
     console.log(prezzoBigliettoSenzaSconto);
+
+    if (eta === "Minorenne") {
+        prezzoBigliettoSenzaSconto *= 0.8; // Applica 20% di sconto
+        offerta = "Sconto Minorenne";
+    } else if (eta === "Over 65") {
+        prezzoBigliettoSenzaSconto *= 0.6; // Applica 40% di sconto
+        offerta = "Sconto Over 65";
+    } 
 
     const carrozza = Math.floor(Math.random() * 9) +1;
     const cp = Math.floor(Math.random() * (100000 - 90000 + 1 )) + 90000;
@@ -55,8 +57,8 @@ buttonGenera.addEventListener('click', function() {
     bigliettoDiv.classList.remove('hidden');
     bigliettoDiv.classList.add('show');
 
- } 
-);
+});
+
 
 const buttonAnnulla = document.getElementById('annulla');
 buttonAnnulla.addEventListener( 'click',

@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    background-color: #B91350;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.wrapper h2 {
+    color: white;
+    text-align: center;
+}
+.top {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.col {
+    padding: 10px;
+}

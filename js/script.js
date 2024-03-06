@@ -18,48 +18,42 @@ const buttonGenera = document.getElementById('genera');
 console.log(buttonGenera);
 buttonGenera.addEventListener('click', function() {
     
-  const inputEta = document.getElementById("fascia-eta");
-  const eta = inputEta.value;
-  console.log(eta);
+    const inputEta = document.getElementById("fascia-eta");
+    const eta = inputEta.value;
+    console.log(eta);
 
-  const inputNome = document.getElementById("nome-utente");
-  const nomeUtente = inputNome.value;
-  console.log(nomeUtente);
+    const inputNome = document.getElementById("nome-utente");
+    const nomeUtente = inputNome.value;
+    console.log(nomeUtente);
 
+    const inputKm = document.getElementById("km");
+    const percorrenza = parseInt(inputKm.value);
+    console.log(percorrenza);
 
-  const inputKm = document.getElementById("km");
-  const percorrenza = parseInt(inputKm.value);
-  console.log(percorrenza);
+    const offerta = "Tariffa Standard"  
+    if (eta === "Minorenne") {
+        prezzoBigliettoSenzaSconto *= 0.8; // Applicazione dello sconto del 20%
+        offerta = "Sconto Minorenne";
+    } else if (eta === "Over 65") {
+        prezzoBigliettoSenzaSconto *= 0.6; // Applicazione dello sconto del 40%
+        offerta = "Sconto Over 65";
+    } 
+    const prezzoAlKilometro = 0.21;
+    const prezzoBigliettoSenzaSconto = prezzoAlKilometro * percorrenza;
+    console.log(prezzoBigliettoSenzaSconto);
 
-  const prezzoAlKilometro = 0.21;
-  const prezzoBigliettoSenzaSconto = prezzoAlKilometro * percorrenza;
-  console.log(prezzoBigliettoSenzaSconto);
+    const carrozza = Math.floor(Math.random() * 9) +1;
+    const cp = Math.floor(Math.random() * (100000 - 90000 + 1 )) + 90000;
 
-  const offerta = "Tariffa Standard"
+    document.getElementById('nome-passegero').innerHTML = nomeUtente;
+    document.getElementById('offerta').innerHTML = offerta;
+    document.getElementById('costo-biglietto').innerHTML = prezzoBigliettoSenzaSconto.toFixed(2);
+    document.getElementById('carrozza').innerHTML = carrozza;
+    document.getElementById('codice-cp').innerHTML = cp;
 
-  if (eta == "minorenne") {
-    ((prezzoBigliettoSenzaSconto / 100) * 80);
-    offerta = "Sconto Minorenne";
-  } else if (eta == "over65") {
-    ((prezzoBigliettoSenzaSconto / 100) * 60);
-    offerta = "Sconto Maggiorenne";
-  } else {
-    (prezzoBigliettoSenzaSconto);
-  }
-
-  const carrozza = Math.floor(Math.random() * 9) +1;
-  const cp = Math.floor(Math.random() * (100000 - 90000 + 1 )) + 90000;
-
-
-  document.getElementById('nome-passegero').innerHTML = nomeUtente;
-  document.getElementById('offerta').innerHTML = offerta;
-  document.getElementById('costo-biglietto').innerHTML = prezzoBigliettoSenzaSconto.toFixed(2);
-  document.getElementById('carrozza').innerHTML = carrozza;
-  document.getElementById('codice-cp').innerHTML = cp;
-
-  const bigliettoDiv = document.getElementById('biglietto');
-  bigliettoDiv.classList.remove('hidden');
-  bigliettoDiv.classList.add('show');
+    const bigliettoDiv = document.getElementById('biglietto');
+    bigliettoDiv.classList.remove('hidden');
+    bigliettoDiv.classList.add('show');
 
  } 
 );

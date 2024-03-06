@@ -45,26 +45,22 @@
         <h2 class="fw-bold p-3 m-0">IL TUO BIGLIETTO</h2>
         <div id="biglietto" class="ms-bottom-container bg-white p-3 hidden">
             <h3 class="padding fw-bold text-black">Dettaglio passegeri</h3>
-            <div class="dettaglio-biglietto d-flex border-top border-bottom border-secondary">
-                <div class="col bg-secondary">
+            <div class="row dettaglio-biglietto d-flex border-top border-bottom border-secondary">
+                <div class="col-4 bg-secondary">
                     <h3 class="fw-bold text-black pt-5">NOME PASSEGGERO</h3>
                     <h4 class="fw-bold text-black p-3" id="nome-passegero"></h4>
                 </div>
-                <div class="col">
-                    <table>
-                        <tr>
-                            <th class="p-3 text-black">Offerta</th>
-                            <th class="p-3 text-black">Carrozza</th>
-                            <th class="p-3 text-black">Codice CP</th>
-                            <th class="p-3 text-black">Costo biglietto</th>
-                        </tr>
-                        <tr>
-                            <td class="p-3" id="offerta"></td>
-                            <td class="p-3" id="carrozza"></td>
-                            <td class="p-3" id="codice-cp"></td>
-                            <td class="p-3" id="costo-biglietto"></td>
-                        </tr>
-                    </table>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-3 p-3 text-black fw-bold">Offerta</div>
+                        <div class="col-3 p-3 text-black fw-bold">Carrozza</div>
+                        <div class="col-3 p-3 text-black fw-bold">Codice CP</div>
+                        <div class="col-3 p-3 text-black fw-bold">Costo biglietto</div>
+                        <div class="col-3 p-3 text-black" id="offerta"></div>
+                        <div class="col-3 p-3 text-black" id="carrozza"></div>
+                        <div class="col-3 p-3 text-black" id="codice-cp"></div>
+                        <div class="col-3 p-3 text-black" id="costo-biglietto"></div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -8,6 +8,14 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
+.hidden {
+  opacity: 0;
+  transition:0.5s;
+}
+.show {
+  opacity: 1;
+  transition:0.5s;
+}
 .wrapper h2 {
     color: white;
 }
@@ -18,53 +26,41 @@ body {
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-
-  input:focus {
-    background-color: #B91350;
-    color: white;
-  }
+input:focus {
+  background-color: #B91350;
+  color: white;
+}
+input:focus::placeholder {
+  color: white;
+}
+label {
+  margin-bottom: 10px;
+  color: #B91350;
+}
+input {
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #B91350;
+  padding: 10px;
+  line-height: 25px;
+  font-size: 16px;
+}
+select {
+  height: 25px;
+  border: 1px solid #B91350;
+  font-size: 16px;
+}
+select:focus {
+  background-color: #B91350;
+  color: white;
+}
+.btn:hover {
+  color: white;
+  background-color: grey;
+}
+.ms-bottom-container {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
   
-  input:focus::placeholder {
-    color: white;
-  }
-  
-  label {
-    margin-bottom: 10px;
-    color: #B91350;
-  }
-  
-  input {
-    height: 25px;
-    border-radius: 5px;
-    border: 1px solid #B91350;
-    padding: 10px;
-    line-height: 25px;
-    font-size: 16px;
-  }
-  
-  select {
-    height: 25px;
-    border: 1px solid #B91350;
-    font-size: 16px;
-  }
-  
-  select:focus {
-    background-color: #B91350;
-    color: white;
-  }
-  
-  .btn:hover {
-    color: white;
-    background-color: grey;
-  }
-  
-  .ms-bottom-container {
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 5px;
-  }
-  
-  table {
-    height: 200px;
-    width: 100%;
-  }
